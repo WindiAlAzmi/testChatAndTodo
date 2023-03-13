@@ -1,14 +1,14 @@
-import React, {useState} from "react";
+import React from "react";
 import Auth from "../components/Auth";
 import Inbox from "../components/Inbox";
 import useChatStore from "../store/chat";
 
-import Cookies from "universal-cookie";
+// import Cookies from "universal-cookie";
 import Logout from "../components/Logout";
-const cookies = new Cookies();
+// const cookies = new Cookies();
 
 const Main = () => {
-    const [isAuth, setIstAuth] = useState(cookies.get("auth-token"));
+    // const [isAuth, setIstAuth] = useState(cookies.get("auth-token"));
     const { chatBtn } = useChatStore();
 
 
