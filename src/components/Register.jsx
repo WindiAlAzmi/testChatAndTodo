@@ -13,7 +13,7 @@ const Register = () => {
         loading:false
     });
 
-    const {name, email, password, error, loading} = data;
+    const {name, email, password, error} = data;
     console.log(data, 'ini data register');
 
     const handleChange = (e) => {
