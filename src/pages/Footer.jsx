@@ -24,6 +24,7 @@ const Footer =  () => {
       };
 
       const readerHandler = () => {
+        console.log('masuk todo');
         setClickChat(false);
         setClickReader(!clickReader);
          setFalseChatBtn();
