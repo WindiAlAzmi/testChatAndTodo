@@ -8,7 +8,7 @@ const Layout = () => {
     return (
       <div className="h-full bg-[#262626] flex flex-col justify-between">
         <Header />
-        <div className="bg-yellow-400 w-full flex pr-3 pb-2 flex-col justify-end gap-4">
+        <div className="bg-[#262626]  w-full flex pr-3 pb-2 flex-col justify-end  gap-4">
           <Outlet />
           <Footer />
         </div>

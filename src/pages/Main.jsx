@@ -1,10 +1,10 @@
 import React from "react";
-import Auth from "../components/Auth";
+// import Auth from "../components/Auth";
 import Inbox from "../components/Inbox";
 import useChatStore from "../store/chat";
 
 // import Cookies from "universal-cookie";
-import Logout from "../components/Logout";
+// import Logout from "../components/Logout";
 // const cookies = new Cookies();
 
 const Main = () => {
@@ -20,15 +20,14 @@ const Main = () => {
     //     )
     // }
 
-    return(
-        <div className="border border-black mt-24 ">
-            <Logout />
-            <Auth />
-    
-           {chatBtn && <Inbox />}
-           
-        </div>
-    )
+    return (
+      <div className="bg-[#262626]  mt-24 ">
+        {/* <Logout />
+            <Auth /> */}
+
+        {chatBtn && <Inbox />}
+      </div>
+    );
 }
 
 export default Main;

@@ -5,7 +5,7 @@ import InboxAllChatComponent from "./InboxAllChatComponent";
 
 const LoadingChat = () => {
     return (
-      <div className="flex flex-col items-center gap-4 ml-24 mr-24 mt-24 mb-24">
+      <div className="flex flex-col  mb-24 justify-center items-center gap-4  h-80">
         <div className="">
           <Oval
             height={50}

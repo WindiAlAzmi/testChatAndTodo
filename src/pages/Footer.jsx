@@ -12,11 +12,12 @@ const Footer =  () => {
       const [btnContainer, setBtnContainer] = useState(false);
       const [clickChat, setClickChat] = useState(false);
       const [clickReader, setClickReader] = useState(false);
-      const { setChatBtn, chatBtn, setFalseChatBtn } = useChatStore();
+      const { setChatBtn, chatBtn, setFalseChatBtn, setFalseDetailChatBtn } = useChatStore();
 
       const chatHandler = () => {
         setClickReader(false);
         setClickChat(!clickChat);
+        setFalseDetailChatBtn();
         setChatBtn();
       };
 
@@ -24,6 +25,8 @@ const Footer =  () => {
         setClickChat(false);
         setClickReader(!clickReader);
          setFalseChatBtn();
+    setFalseDetailChatBtn();
+
       };
 
       let content = null;
@@ -137,7 +140,7 @@ const Footer =  () => {
 
 
     return (
-      <div className=" w-full flex justify-end right-6 pb-2 flex-row gap-6">
+      <div className=" bg-[#262626] w-full flex justify-end right-6 pb-2 flex-row gap-6">
         {content}
         <div
           className="bg-[#2F80ED] rounded-full p-3 w-[50px] h-[50px]"
