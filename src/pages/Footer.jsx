@@ -7,6 +7,7 @@ import readerWhite from "../assets/img/feather-icon/readerWhite.svg";
 import useChatStore from "../store/chat";
 
 
+
 const Footer =  () => {
       const [btnToggle, setBtnToggle] = useState(false);
       const [btnContainer, setBtnContainer] = useState(false);
@@ -114,8 +115,12 @@ const Footer =  () => {
       }
 
       useEffect(() => {
-        console.log(chatBtn, "ini zustand storre");
-      }, [chatBtn]);
+        if(btnToggle === false){
+          setFalseChatBtn();
+          setFalseTodoBtn();
+          setFalseDetailChatBtn();
+        }
+      }, [btnToggle, setFalseChatBtn, setFalseDetailChatBtn, setFalseTodoBtn]);
 
       useEffect(() => {
         if (btnToggle === true) {
