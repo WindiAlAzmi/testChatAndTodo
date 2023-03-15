@@ -46,6 +46,7 @@ const useChatStore = create((set, get) => ({
   ],
   chatBtn: false,
   detailChatBtn: false,
+  todoBtn: false,
   isRoom: [],
   allChatRoom: [],
   searchBtn: "",
@@ -58,11 +59,17 @@ const useChatStore = create((set, get) => ({
   setDetailChatBtn: () => {
     set((state) => ({ detailChatBtn: !state.detailChatBtn }));
   },
+  setTodoBtn: () => {
+    set((state) => ({ todoBtn: !state.todoBtn }));
+  },
   setFalseChatBtn: () => {
     set((state) => ({ chatBtn: false }));
   },
   setFalseDetailChatBtn: () => {
     set((state) => ({ detailChatBtn: false }));
+  },
+  setFalseTodoBtn: () => {
+    set((state) => ({ todoBtn : false }));
   },
   setDataChat: () => {
     const getData = get().dataArray.filter((dc) =>

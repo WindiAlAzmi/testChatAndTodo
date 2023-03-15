@@ -1,6 +1,7 @@
 import React from "react";
 // import Auth from "../components/Auth";
 import Inbox from "../components/Inbox";
+import Todo from "../components/Todo";
 import useChatStore from "../store/chat";
 
 // import Cookies from "universal-cookie";
@@ -9,7 +10,7 @@ import useChatStore from "../store/chat";
 
 const Main = () => {
     // const [isAuth, setIstAuth] = useState(cookies.get("auth-token"));
-    const { chatBtn } = useChatStore();
+    const { chatBtn, todoBtn } = useChatStore();
 
 
     // if(!isAuth){
@@ -26,6 +27,7 @@ const Main = () => {
             <Auth /> */}
 
         {chatBtn && <Inbox />}
+        {todoBtn && <Todo />}
       </div>
     );
 }

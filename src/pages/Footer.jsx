@@ -12,13 +12,14 @@ const Footer =  () => {
       const [btnContainer, setBtnContainer] = useState(false);
       const [clickChat, setClickChat] = useState(false);
       const [clickReader, setClickReader] = useState(false);
-      const { setChatBtn, chatBtn, setFalseChatBtn, setFalseDetailChatBtn } = useChatStore();
+      const { setTodoBtn, setFalseTodoBtn,  setChatBtn, chatBtn, setFalseChatBtn, setFalseDetailChatBtn } = useChatStore();
 
       const chatHandler = () => {
         setClickReader(false);
         setClickChat(!clickChat);
         setFalseDetailChatBtn();
         setChatBtn();
+        setFalseTodoBtn();
       };
 
       const readerHandler = () => {
@@ -26,6 +27,7 @@ const Footer =  () => {
         setClickReader(!clickReader);
          setFalseChatBtn();
     setFalseDetailChatBtn();
+      setTodoBtn();
 
       };
 
